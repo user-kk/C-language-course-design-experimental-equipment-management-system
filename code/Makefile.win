@@ -1,0 +1,147 @@
+# Project: C语言课设
+# Makefile created by Dev-C++ 5.11
+
+CPP      = g++.exe -D__DEBUG__
+CC       = gcc.exe -D__DEBUG__
+WINDRES  = windres.exe
+RES      = C语言课设_private.res
+OBJ      = main.o log_in.o delete_name.o change_password.o addname.o gotoxy.o menu.o change_other_password.o option_menu.o account_settings_menu.o change_color.o print.o addnode.o correct.o scan.o find_same_name.o from_data_to_list.o release_node.o "device_cheak\ _in.o" from_link_to_file.o delete_device.o backup_menu.o back_up.o recovery.o sub_menu.o sub_print.o display_setup_menu.o setnumber.o inquire_menu.o inquire.o compare_date.o from_link_to_file_sub.o from_data_to_list_sub.o sort.o statistic_menu.o statistic_sizename.o statistic.o helphelp.o setcolor.o $(RES)
+LINKOBJ  = main.o log_in.o delete_name.o change_password.o addname.o gotoxy.o menu.o change_other_password.o option_menu.o account_settings_menu.o change_color.o print.o addnode.o correct.o scan.o find_same_name.o from_data_to_list.o release_node.o "device_cheak _in.o" from_link_to_file.o delete_device.o backup_menu.o back_up.o recovery.o sub_menu.o sub_print.o display_setup_menu.o setnumber.o inquire_menu.o inquire.o compare_date.o from_link_to_file_sub.o from_data_to_list_sub.o sort.o statistic_menu.o statistic_sizename.o statistic.o helphelp.o setcolor.o $(RES)
+LIBS     = -L"D:/应用/Dev-Cpp/MinGW64/lib" -L"D:/应用/Dev-Cpp/MinGW64/x86_64-w64-mingw32/lib" -static-libgcc -g3
+INCS     = -I"D:/应用/Dev-Cpp/MinGW64/include" -I"D:/应用/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"D:/应用/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include"
+CXXINCS  = -I"D:/应用/Dev-Cpp/MinGW64/include" -I"D:/应用/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"D:/应用/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include" -I"D:/应用/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include/c++"
+BIN      = C语言课设.exe
+CXXFLAGS = $(CXXINCS) -g3
+CFLAGS   = $(INCS) -g3
+RM       = rm.exe -f
+
+.PHONY: all all-before all-after clean clean-custom
+
+all: all-before $(BIN) all-after
+
+clean: clean-custom
+	${RM} $(OBJ) $(BIN)
+
+$(BIN): $(OBJ)
+	$(CPP) $(LINKOBJ) -o $(BIN) $(LIBS)
+
+main.o: main.cpp
+	$(CPP) -c main.cpp -o main.o $(CXXFLAGS)
+
+log_in.o: log_in.c
+	$(CPP) -c log_in.c -o log_in.o $(CXXFLAGS)
+
+delete_name.o: delete_name.c
+	$(CPP) -c delete_name.c -o delete_name.o $(CXXFLAGS)
+
+change_password.o: change_password.c
+	$(CPP) -c change_password.c -o change_password.o $(CXXFLAGS)
+
+addname.o: addname.c
+	$(CPP) -c addname.c -o addname.o $(CXXFLAGS)
+
+gotoxy.o: gotoxy.c
+	$(CPP) -c gotoxy.c -o gotoxy.o $(CXXFLAGS)
+
+menu.o: menu.c
+	$(CPP) -c menu.c -o menu.o $(CXXFLAGS)
+
+change_other_password.o: change_other_password.c
+	$(CPP) -c change_other_password.c -o change_other_password.o $(CXXFLAGS)
+
+option_menu.o: option_menu.c
+	$(CPP) -c option_menu.c -o option_menu.o $(CXXFLAGS)
+
+account_settings_menu.o: account_settings_menu.c
+	$(CPP) -c account_settings_menu.c -o account_settings_menu.o $(CXXFLAGS)
+
+change_color.o: change_color.c
+	$(CPP) -c change_color.c -o change_color.o $(CXXFLAGS)
+
+print.o: print.c
+	$(CPP) -c print.c -o print.o $(CXXFLAGS)
+
+addnode.o: addnode.c
+	$(CPP) -c addnode.c -o addnode.o $(CXXFLAGS)
+
+correct.o: correct.c
+	$(CPP) -c correct.c -o correct.o $(CXXFLAGS)
+
+scan.o: scan.c
+	$(CPP) -c scan.c -o scan.o $(CXXFLAGS)
+
+find_same_name.o: find_same_name.c
+	$(CPP) -c find_same_name.c -o find_same_name.o $(CXXFLAGS)
+
+from_data_to_list.o: from_data_to_list.c
+	$(CPP) -c from_data_to_list.c -o from_data_to_list.o $(CXXFLAGS)
+
+release_node.o: release_node.c
+	$(CPP) -c release_node.c -o release_node.o $(CXXFLAGS)
+
+"device_cheak\ _in.o": device_cheak\ _in.c
+	$(CPP) -c "device_cheak _in.c" -o "device_cheak _in.o" $(CXXFLAGS)
+
+from_link_to_file.o: from_link_to_file.c
+	$(CPP) -c from_link_to_file.c -o from_link_to_file.o $(CXXFLAGS)
+
+delete_device.o: delete_device.c
+	$(CPP) -c delete_device.c -o delete_device.o $(CXXFLAGS)
+
+backup_menu.o: backup_menu.c
+	$(CPP) -c backup_menu.c -o backup_menu.o $(CXXFLAGS)
+
+back_up.o: back_up.c
+	$(CPP) -c back_up.c -o back_up.o $(CXXFLAGS)
+
+recovery.o: recovery.c
+	$(CPP) -c recovery.c -o recovery.o $(CXXFLAGS)
+
+sub_menu.o: sub_menu.c
+	$(CPP) -c sub_menu.c -o sub_menu.o $(CXXFLAGS)
+
+sub_print.o: sub_print.c
+	$(CPP) -c sub_print.c -o sub_print.o $(CXXFLAGS)
+
+display_setup_menu.o: display_setup_menu.c
+	$(CPP) -c display_setup_menu.c -o display_setup_menu.o $(CXXFLAGS)
+
+setnumber.o: setnumber.c
+	$(CPP) -c setnumber.c -o setnumber.o $(CXXFLAGS)
+
+inquire_menu.o: inquire_menu.c
+	$(CPP) -c inquire_menu.c -o inquire_menu.o $(CXXFLAGS)
+
+inquire.o: inquire.c
+	$(CPP) -c inquire.c -o inquire.o $(CXXFLAGS)
+
+compare_date.o: compare_date.c
+	$(CPP) -c compare_date.c -o compare_date.o $(CXXFLAGS)
+
+from_link_to_file_sub.o: from_link_to_file_sub.c
+	$(CPP) -c from_link_to_file_sub.c -o from_link_to_file_sub.o $(CXXFLAGS)
+
+from_data_to_list_sub.o: from_data_to_list_sub.c
+	$(CPP) -c from_data_to_list_sub.c -o from_data_to_list_sub.o $(CXXFLAGS)
+
+sort.o: sort.c
+	$(CPP) -c sort.c -o sort.o $(CXXFLAGS)
+
+statistic_menu.o: statistic_menu.c
+	$(CPP) -c statistic_menu.c -o statistic_menu.o $(CXXFLAGS)
+
+statistic_sizename.o: statistic_sizename.c
+	$(CPP) -c statistic_sizename.c -o statistic_sizename.o $(CXXFLAGS)
+
+statistic.o: statistic.c
+	$(CPP) -c statistic.c -o statistic.o $(CXXFLAGS)
+
+helphelp.o: helphelp.c
+	$(CPP) -c helphelp.c -o helphelp.o $(CXXFLAGS)
+
+setcolor.o: setcolor.c
+	$(CPP) -c setcolor.c -o setcolor.o $(CXXFLAGS)
+
+C语言课设_private.res: C语言课设_private.rc 
+	$(WINDRES) -i C语言课设_private.rc --input-format=rc -o C语言课设_private.res -O coff 
+

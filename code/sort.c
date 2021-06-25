@@ -1,0 +1,154 @@
+#include"C语言课设头文件.h"
+//本函数用于对设备进行排序 
+void sort()
+{
+	system("cls"); 
+	struct Node*p,*p1,*head;
+	struct Device device1;
+	int count=0,i=0,j=0,a,b;                         //a,b承接 
+	head=p=from_data_to_list();
+	p1=p->next;
+	printf("请选择排序标准：  1(时间) 2(类型) 3(编号)");
+	a=scan(3);
+	printf("请选择 1(升序) 2(降序)");
+	b=scan(2); 
+	while(p!=NULL)
+		 { 	
+			count++;
+			p=p->next;
+	  	 }
+    p=head;
+	switch(a) 
+	{case 2:{	
+	           if(b==1)
+	           		{for(i=0;i<count-1;i++)
+       					{
+		   					p=head;
+       	  			   	 	p1=p->next;
+	  	   					for(j=0;j<count-i-1;j++)
+	     						{
+			    					if(strcmp((p->device).sizename,(p1->device).sizename)<=0)
+			     				  		{
+										 device1=p->device;
+										 p->device=p1->device;
+										 p1->device=device1;		                                          
+			    						}
+	            					p=p->next;
+									p1=p1->next;
+								}      
+	   					} 
+	   				printf("排序成功！");
+	   				system("pause");
+					}
+			   else
+				{for(i=0;i<count-1;i++)
+       					{
+		   					p=head;
+       	  			   	 	p1=p->next;
+	  	   					for(j=0;j<count-i-1;j++)
+	     						{
+			    					if(strcmp((p->device).sizename,(p1->device).sizename)>0)
+			     				  		{
+										 device1=p->device;
+										 p->device=p1->device;
+										 p1->device=device1;		                                          
+			    						}
+	            					p=p->next;
+									p1=p1->next;
+								}      
+	   					} 
+	   			printf("排序成功！");
+	   			system("pause");
+			    }
+				
+	   		 break;
+	        }
+	   case 3:{if(b==1)
+	   				{for(i=0;i<count-1;i++)
+         				 {
+		 	   				 p=head;
+       						 p1=p->next;   
+							for(j=0;j<count-i-1;j++)
+	     						{
+									if(strcmp((p->device).num,(p1->device).num)>=0)
+										{
+											device1=p->device;
+											p->device=p1->device;
+											p1->device=device1;	                                           
+										}
+	           					p=p->next;
+								p1=p1->next;
+								}      
+	   					}
+	   				 printf("排序成功！");
+	   				 system("pause");
+					}
+			  else
+				{
+					{for(i=0;i<count-1;i++)
+         				 {
+		 	   				 p=head;
+       						 p1=p->next;   
+							for(j=0;j<count-i-1;j++)
+	     						{
+									if(strcmp((p->device).num,(p1->device).num)<0)
+										{
+											device1=p->device;
+											p->device=p1->device;
+											p1->device=device1;	                                           
+										}
+	           					p=p->next;
+								p1=p1->next;
+								}      
+	   					}
+					 printf("排序成功！");
+	   				 system("pause");
+					}	
+				}	
+			   break;
+	   		  }
+		case 1:{if(b==1)
+	   				{for(i=0;i<count-1;i++)
+         				 {
+		 	   				 p=head;
+       						 p1=p->next;   
+							for(j=0;j<count-i-1;j++)
+	     						{
+									if(compare_date((p->device).buy_time,(p1->device).buy_time)<=0)
+										{
+											device1=p->device;
+											p->device=p1->device;
+											p1->device=device1;	                                           
+										}
+	           					p=p->next;
+								p1=p1->next;
+								}      
+	   					}
+	   				 printf("排序成功！");
+	   				 system("pause");
+					}
+				else
+					{for(i=0;i<count-1;i++)
+         				 {
+		 	   				 p=head;
+       						 p1=p->next;   
+							for(j=0;j<count-i-1;j++)
+	     						{
+									if(compare_date((p->device).buy_time,(p1->device).buy_time)>0)
+										{
+											device1=p->device;
+											p->device=p1->device;
+											p1->device=device1;	                                           
+										}
+	           					p=p->next;
+								p1=p1->next;
+								}      
+	   					}
+	   				printf("排序成功！");
+	   				system("pause");
+					}
+				break;
+			   }
+	}
+from_link_to_file(head);		
+}
